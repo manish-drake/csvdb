@@ -38,6 +38,10 @@
         "xutility": "cpp",
         "functional": "cpp",
         "tuple": "cpp",
-        "xfunctional": "cpp"
+        "xfunctional": "cpp",
+        "cctype": "cpp",
+        "concepts": "cpp",
+        "memory": "cpp",
+        "algorithm": "cpp"
     }
 }

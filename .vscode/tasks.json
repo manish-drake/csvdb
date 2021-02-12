@@ -6,7 +6,7 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "C:/Qt/Qt5.9.7/Tools/mingw530_32/bin/mingw32-make",
+            "command": "C:/Qt/Tools/mingw530_32/bin/mingw32-make",
             "group": {
                 "kind": "build",
                 "isDefault": true

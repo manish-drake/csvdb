@@ -6,10 +6,10 @@ DEFINES       = -DUNICODE -D_UNICODE -DWIN32
 CFLAGS        = -fno-keep-inline-dllexport -g -Wall -W -Wextra $(DEFINES)
 CXXFLAGS      = -fno-keep-inline-dllexport -g -std=gnu++11 -Wall -W -Wextra -fexceptions -mthreads $(DEFINES)
 LINK          = g++
-LFLAGS        = -Wl,-subsystem,windows -mthreads
+LFLAGS        = -Wl,-subsystem,windows -mthreads -shared -Wl,--out-implib,libcsvdb.a
 INCPATH       = -I.
 VPATH	      = .
-MINGW         = C:\Qt\Qt5.9.7\5.9.7\mingw53_32
+MINGW         = C:\Qt\5.9.8\mingw53_32
 LIBS          = -lmingw32 -L${MINGW}\lib
 IDC           = idc
 IDL           = midl
@@ -39,7 +39,7 @@ SOURCEO       = $(SOURCES:.cpp=.o)
 OBJECTS       = $(addprefix $(OBJECTS_DIR)/,$(SOURCEO))
 DEPS          = $(OBJECTS:.o=.d)
 DESTDIR       = .
-TARGET        = target
+TARGET        = libcsvdb.dll
 ####### Customized Vars
 INCPATH	     += 
 VPATH        +=	

@@ -19,13 +19,13 @@ int main(int argc, char* argv[]){
             auto p = *row["name1"];
         }
         std::cout << row[0] << std::endl;
-    }
+    }  
     csv.Save("test1.csv");
     CSVList csv_read;
     csv_read.Open("test1.csv");
     csv_read.Save("temp.txt");
-
-
+  
+   
     cin.ignore();
     return 0;
 }
