@@ -25,7 +25,7 @@ void CSVList::split(const char *str, const char *delimitter, row *collection)
         ptr = strtok(nullptr, delimitter);
     }
 }
-
+ 
 std::string *CSVList::get(const row::size_type &row, const row::size_type &col)
 {
     return &m_rows[row][col];

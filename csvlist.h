@@ -25,7 +25,10 @@ struct filter
 
 class CSVList
 {
+public:
     using row = std::vector<std::string>;
+
+private:
     struct csv
     {
         row m_row;
@@ -85,7 +88,6 @@ class CSVList
     using rows = std::vector<csv>;
     using const_row_iterator = rows::const_iterator;
 
-    void split(const char *str, const char *delimitter, row *collection);
     row m_fields;
     rows m_rows;
 
@@ -104,6 +106,7 @@ class CSVList
     }
 
 public:
+    static void split(const char *str, const char *delimitter, row *collection);
     using prows = std::vector<csv *>;
 
 private:
